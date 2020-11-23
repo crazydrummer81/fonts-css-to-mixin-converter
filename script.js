@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			return item.replace(/font-family:\s*'(.*?)';/gi, '$1');
 		});
 		let fontSrcs = sourceCss.match(/src: url\('(.*?)'\);/gi).map(item => {
-			return item.replace(/src: url\('(.*?)'\);/gi, '$1');
+			return item.replace(/url\('(.*)(\.\w+)'\);/gi, '$1');
 		});
 		let fontWeights = sourceCss.match(/font-weight:\s*(.*?);/gi).map(item => {
 			return item.replace(/font-weight:\s*(.*?);/gi, '$1');
@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			resrultText += `@include font("${item.font_name}", "${item.file_name}", "${item.weight}", "${item.style}");\n`;
 		});
 		resultNode.value = resrultText;
+		navigator.clipboard.writeText(resrultText);
 		
 	};
 	inputNode.addEventListener('input', render);

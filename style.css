@@ -2,7 +2,7 @@
 	--dark: #1B2B34;
 }
 body, textarea, input {
-	font-family: Roboto;
+	font-family: Consolas, Courier, monospace;
 	background: var(--dark);
 	color: #fff;
 	border-color: #eee;

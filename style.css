@@ -1,9 +1,12 @@
+:root {
+	--dark: #1B2B34;
+}
 body, textarea, input {
 	font-family: Roboto;
-	background: #242424;
+	background: var(--dark);
 	color: #fff;
-	border-color: #ddd;
-	outline-color: #ddd;
+	border-color: #eee;
+	outline-color: #eee;
 }
 input {
 	border-width: 1px;

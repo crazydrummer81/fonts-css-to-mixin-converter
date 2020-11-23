@@ -1,5 +1,12 @@
-body {
+body, textarea, input {
 	font-family: Roboto;
+	background: #242424;
+	color: #fff;
+	border-color: #ddd;
+	outline-color: #ddd;
+}
+input {
+	border-width: 1px;
 }
 textarea {
 	width: 80em; height: 25em;
